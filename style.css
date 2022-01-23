@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+}
+p {
+  margin: 0;
+}
+header {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 5%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.Modal {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.Modal {
+  /* display: none; */
+}
+.Modal .Container {
+  overflow: auto;
+  width: 80%;
+  height: 65%;
+  background-color: white;
+  border-radius: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.Modal > .Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 60px;
+}
+.Modal .Species {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.redText {
+  color: #f13d3d;
+}
+
+.Modal .title {
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  color: #676767;
+  font-size: 4.1em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.Modal .subTitle {
+  color: #5b5b5b;
+  font-size: 2.2em;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.Modal .ConfirmContainer {
+  width: 100%;
+  font-weight: 400;
+}
+.Modal .ConfirmBtn {
+  color: #676767;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2vh;
+  margin-top: 5px;
+}
+
+.Modal .center-Image {
+  width: calc(0.125vh * 230);
+  height: calc(0.125vh * 168);
+  max-height: 45%;
+  margin: auto 0;
+}
+
+.Modal .center-text {
+  font-size: calc(0.125vh * 120);
+  width: calc(0.125vh * 230);
+  height: calc(0.125vh * 130);
+  max-height: 45%;
+  margin: auto 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Modal .ImageAlt {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #676767;
+}
+
+.Modal .noteText {
+  font-size: 2.5em;
+  margin: auto 0;
+  width: 100%;
+  margin: calc(auto / 2) 0 0.5% 0;
+  text-align: center;
+  color: #5b5b5b;
+  line-height: 1.1em;
+}
+
+.Modal .NextBtn {
+  font-size: 2vh;
+  font-weight: bold;
+  width: 60%;
+  height: 2.5em;
+  background-color: #f7d146;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: auto;
+  padding: 0.5em 0;
+  box-sizing: border-box;
+}
+
+.Modal .NextBtn.passive {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.Modal .NextBtn.active {
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.Modal .NextBtn > p {
+  height: 100%;
+  padding: auto 0;
+  box-sizing: border-box;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.PromiseList {
+  margin-top: 65px;
+}
+
+li {
+  margin: 0 0 0 1.25em;
+}
+
+.PromiseList-content .CheckBox {
+  border: 2px solid #676767;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0 3px 0 -1.25em;
+  transition: 0.3s;
+  position: relative;
+}
+.PromiseList-content.checked {
+  font-weight: bold;
+  transition: 0.3s;
+}
+.PromiseList-content.checked .CheckBox {
+  /* background-color: #6767675d; */
+  border: 3.5px solid #676767;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.animated-check {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -30%;
+  right: 0;
+  top: -80%;
+  bottom: 0;
+}
+
+.animated-check path {
+  display: none;
+  fill: none;
+  stroke: #f13d3d;
+  stroke-width: 4;
+  stroke-dasharray: 23;
+  stroke-dashoffset: 23;
+  animation: draw 0.3s ease forwards;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.PromiseList .PromiseList-content {
+  line-height: 1.5em;
+  width: 90%;
+  display: inline-block;
+  font-size: 3.25em;
+  margin-bottom: 50px;
+  color: #676767;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+span.color-red {
+  color: #f13d3d;
+}
+span.text-sm {
+  line-height: 1.2em;
+  font-size: 0.9em;
+}
+
+.Loading {
+  overflow: auto;
+  width: 80%;
+  height: 65%;
+  border-radius: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pagination {
+  position: absolute;
+  display: flex;
+  margin: 0 auto;
+  left: 25%;
+  top: 90%;
+  width: 50%;
+}
+
+.Pagination .paging-circle {
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 1s;
+}
+
+.pagination .paging-circle:first-child {
+  margin-left: auto;
+}
+
+.pagination .paging-circle:last-child {
+  margin-right: auto;
+}
+
+.Pagination .paging-circle.current {
+  background-color: #676767;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #f7d146;
+  border-color: #f7d146 transparent #f7d146 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
